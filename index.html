@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAEZ - Artesanía y Materiales de Construcción</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>SAEZ</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Inicio</a></li>
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="#galeria">Galería</a></li>
+                    <li><a href="#videos">Videos</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <h2>Bienvenidos a SAEZ</h2>
+            <p>Explora nuestra colección única de artesanías y materiales de construcción que aportarán un toque especial a tus espacios.</p>
+        </div>
+    </section>
+
+    <section id="productos" class="productos">
+        <div class="container">
+            <h2>Nuestros Productos</h2>
+            <div class="producto">
+                <h3>Tejas Artesanales</h3>
+                <img src="imagenes/imagen 1.jpg" alt="Tejas Artesanales">
+                <p>Tejas de alta calidad, hechas a mano, ideales para tejados que buscan un toque tradicional y elegante.</p>
+            </div>
+            <div class="producto">
+                <h3>Pisos Decorativos</h3>
+                <img src="imagenes/imagen 2.jpg" alt="Pisos Decorativos">
+                <p>Pisos resistentes y decorativos, perfectos para interiores y exteriores, con diseños que añaden sofisticación a cualquier espacio.</p>
+            </div>
+            <div class="producto">
+                <h3>Enchapes Exquisitos</h3>
+                <img src="imagenes/imagen 3.jpg" alt="Enchapes Exquisitos">
+                <p>Enchapes con acabados detallados, ideales para embellecer paredes y suelos con un estilo único.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="galeria" class="galeria">
+        <div class="container">
+            <h2>Galería</h2>
+            <div class="galeria-item">
+                <img src="imagenes/imagen 4.jpg" alt="Proyecto 1">
+                <div class="descripcion">
+                    <h4>Proyecto de Tejas</h4>
+                    <p>Un proyecto destacado donde nuestras tejas artesanales han transformado la apariencia de un elegante hogar rural.</p>
+                </div>
+            </div>
+            <div class="galeria-item">
+                <img src="imagenes/imagen 5.jpg" alt="Proyecto 2">
+                <div class="descripcion">
+                    <h4>Diseño de Pisos</h4>
+                    <p>Pisos decorativos instalados en un moderno apartamento, aportando un toque de elegancia y durabilidad.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="videos" class="videos">
+        <div class="container">
+            <h2>Videos</h2>
+            <div class="video">
+                <iframe src="https://www.youtube.com/embed/2n0JCHD-2jI" frameborder="0" allowfullscreen></iframe>
+                <p>Explora cómo nuestras tejas artesanales y otros productos son creados y aplicados en proyectos reales.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="nosotros" class="nosotros">
+        <div class="container">
+            <h2>Nosotros</h2>
+            <p>En SAEZ, nos dedicamos a la artesanía y materiales de construcción con un enfoque en la calidad y el diseño. Nuestros productos combinan tradición y modernidad, ofreciendo soluciones únicas para cada necesidad.</p>
+        </div>
+    </section>
+
+    <section id="contacto" class="contacto">
+        <div class="container">
+            <h2>Contacto</h2>
+            <form action="enviar_formulario.php" method="post">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+                
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 SAEZ. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
