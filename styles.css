@@ -1,236 +1,126 @@
-/* General */
+/* Estilos generales */
 body {
     font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
-    color: #333;
-    background-color: #f4f4f4;
 }
 
 .container {
-    width: 90%;
+    width: 80%;
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 20px;
 }
 
-/* Header */
 header {
-    background-color: #6D4C41;
-    color: white;
-    padding: 20px 0;
-    border-bottom: 4px solid #3E2723;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
 }
 
 header h1 {
     margin: 0;
-    font-family: 'Merriweather', serif;
+    font-size: 1.8rem;
     text-align: center;
 }
 
 nav ul {
     list-style-type: none;
     padding: 0;
-    margin: 0;
     text-align: center;
 }
 
 nav ul li {
     display: inline;
-    margin-right: 20px;
+    margin: 0 10px;
 }
 
 nav ul li a {
-    color: white;
+    color: #fff;
     text-decoration: none;
-    font-weight: bold;
-    font-size: 18px;
+    font-size: 1.2rem;
+    transition: color 0.3s;
 }
 
-/* Hero Section */
+nav ul li a:hover {
+    color: #ffd700;
+}
+
 .hero {
-    background-color: #FFEBEE;
-    padding: 60px 0;
+    background-color: #f2f2f2;
+    padding: 100px 0;
     text-align: center;
-    border-bottom: 2px solid #E57373;
 }
 
-.hero h2 {
-    margin: 0;
-    font-family: 'Merriweather', serif;
-    font-size: 36px;
-}
-
-.hero p {
-    font-size: 18px;
-    color: #B71C1C;
-}
-
-/* Productos Section */
 .productos {
-    background-color: #FAFAFA;
-    padding: 60px 0;
-}
-
-.productos h2 {
+    background-color: #fff;
+    padding: 80px 0;
     text-align: center;
-    font-size: 30px;
-    margin-bottom: 40px;
 }
 
 .producto {
-    text-align: center;
     margin-bottom: 40px;
 }
 
 .producto img {
-    width: 80%;
-    max-width: 600px;
+    max-width: 100%;
     height: auto;
-    border-radius: 10px;
 }
 
-.producto p {
-    font-size: 16px;
-    color: #616161;
-    margin-top: 10px;
-}
-
-/* Galería Section */
 .galeria {
-    padding: 60px 0;
-    background-color: #FFEBEE;
-}
-
-.galeria h2 {
+    background-color: #f2f2f2;
+    padding: 80px 0;
     text-align: center;
-    font-size: 30px;
-    margin-bottom: 40px;
 }
 
 .galeria-item {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
 .galeria-item img {
-    width: 100%;
+    max-width: 100%;
     height: auto;
-    border-radius: 10px;
 }
 
-.descripcion {
-    text-align: center;
-    margin-top: 10px;
-}
-
-.descripcion h4 {
-    font-size: 20px;
-    color: #B71C1C;
-}
-
-.descripcion p {
-    font-size: 16px;
-    color: #424242;
-}
-
-/* Videos Section */
 .videos {
-    background-color: #FAFAFA;
-    padding: 60px 0;
-}
-
-.videos h2 {
-    text-align: center;
-    font-size: 30px;
-    margin-bottom: 40px;
-}
-
-.video {
+    background-color: #fff;
+    padding: 80px 0;
     text-align: center;
 }
 
-.video iframe {
-    width: 80%;
-    max-width: 800px;
-    height: 450px;
-    border: none;
-    border-radius: 10px;
-}
-
-.video p {
-    font-size: 16px;
-    color: #616161;
-    margin-top: 10px;
-}
-
-/* Nosotros Section */
 .nosotros {
-    padding: 60px 0;
-    background-color: #FFEBEE;
-}
-
-.nosotros h2 {
+    background-color: #f2f2f2;
+    padding: 80px 0;
     text-align: center;
-    font-size: 30px;
-    margin-bottom: 20px;
 }
 
-.nosotros p {
-    font-size: 16px;
-    text-align: center;
-    color: #424242;
-}
-
-/* Contacto Section */
 .contacto {
-    background-color: #FAFAFA;
-    padding: 60px 0;
-}
-
-.contacto h2 {
+    background-color: #fff;
+    padding: 80px 0;
     text-align: center;
-    font-size: 30px;
-    margin-bottom: 40px;
 }
 
-form {
-    max-width: 600px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
+.contacto ul {
+    list-style-type: none;
+    padding: 0;
 }
 
-form label {
-    margin-top: 10px;
+.contacto ul li {
+    margin-bottom: 10px;
 }
 
-form input, form textarea {
-    padding: 15px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-form button {
-    margin-top: 20px;
-    padding: 15px;
-    border: none;
-    background-color: #D05B43;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 18px;
-}
-
-form button:hover {
-    background-color: #B71C1C;
-}
-
-/* Footer */
 footer {
-    background-color: #6D4C41;
-    color: white;
+    background-color: #333;
+    color: #fff;
     text-align: center;
     padding: 20px 0;
-    border-top: 4px solid #3E2723;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
 
 footer p {

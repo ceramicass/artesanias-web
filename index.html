@@ -7,11 +7,67 @@
     <link rel="stylesheet" href="styles.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 8px 0; /* Ajusta el espacio vertical */
+            position: fixed; /* Fija el encabezado en la parte superior */
+            width: 100%;
+            z-index: 1000; /* Asegura que esté por encima del resto del contenido */
+            top: 0; /* Asegura que esté en la parte superior */
+            font-size: 1rem; /* Tamaño del texto */
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+            transition: top 0.3s; /* Añade una transición suave al desplazarse */
+        }
+
+        header.hidden {
+            top: -40px; /* Esconde el encabezado al desplazarse hacia abajo */
+        }
+
+        header nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        header nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            padding-top: 100px; /* Añade un espacio arriba para evitar que el contenido se oculte detrás del encabezado */
+        }
+
+        /* Estilos para las secciones */
+        section {
+            padding: 40px 0;
+        }
+
+        /* Estilos específicos para el video */
+        .video {
+            text-align: center;
+        }
+        .video iframe {
+            width: 100%;
+            max-width: 800px;
+        }
+    </style>
 </head>
 <body>
     <header>
         <div class="container">
-            <h1>SAEZ</h1>
+            <h1 style="font-size: 1.5rem;">SAEZ</h1>
             <nav>
                 <ul>
                     <li><a href="#home">Inicio</a></li>
@@ -77,7 +133,7 @@
         <div class="container">
             <h2>Videos</h2>
             <div class="video">
-                <iframe src="https://www.youtube.com/embed/2n0JCHD-2jI" frameborder="0" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/KCe28FEjeEA?si=Ej5sBriAFCOxdVgO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 <p>Explora cómo nuestras tejas artesanales y otros productos son creados y aplicados en proyectos reales.</p>
             </div>
         </div>
@@ -92,19 +148,13 @@
 
     <section id="contacto" class="contacto">
         <div class="container">
-            <h2>Contacto</h2>
-            <form action="enviar_formulario.php" method="post">
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" required>
-                
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                
-                <label for="mensaje">Mensaje:</label>
-                <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
-                
-                <button type="submit">Enviar</button>
-            </form>
+            <h2>Contacto - EMPRESA SAEZ</h2>
+            <p>Para más información, contáctenos:</p>
+            <ul>
+                <li>Teléfono: 934498803</li>
+                <li>Preguntar por Alex Sáez</li>
+                <li>Dirección: Huachipa - Paradero huaicos</li>
+            </ul>
         </div>
     </section>
 
@@ -113,5 +163,25 @@
             <p>&copy; 2024 SAEZ. Todos los derechos reservados.</p>
         </div>
     </footer>
+
+    <script>
+        // Función para controlar el desplazamiento del encabezado
+        let lastScrollTop = 0;
+        const header = document.querySelector('header');
+
+        window.addEventListener('scroll', () => {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (scrollTop > lastScrollTop) {
+                // Desplazamiento hacia abajo
+                header.classList.add('hidden');
+            } else {
+                // Desplazamiento hacia arriba
+                header.classList.remove('hidden');
+            }
+
+            lastScrollTop = scrollTop;
+        });
+    </script>
 </body>
 </html>
