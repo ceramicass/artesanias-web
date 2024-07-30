@@ -8,66 +8,180 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet">
     <style>
+        /* Estilos generales */
         body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-        }
-
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 8px 0; /* Ajusta el espacio vertical */
-            position: fixed; /* Fija el encabezado en la parte superior */
-            width: 100%;
-            z-index: 1000; /* Asegura que esté por encima del resto del contenido */
-            top: 0; /* Asegura que esté en la parte superior */
-            font-size: 1rem; /* Tamaño del texto */
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
-            transition: top 0.3s; /* Añade una transición suave al desplazarse */
-        }
-
-        header.hidden {
-            top: -40px; /* Esconde el encabezado al desplazarse hacia abajo */
-        }
-
-        header nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
-
-        header nav ul li {
-            display: inline;
-            margin: 0 10px;
+            color: #333;
+            background-color: #f4f4f4;
         }
 
         .container {
-            width: 80%;
-            margin: auto;
-            padding-top: 100px; /* Añade un espacio arriba para evitar que el contenido se oculte detrás del encabezado */
+            width: 90%;
+            margin: 0 auto;
         }
 
-        /* Estilos para las secciones */
+        /* Estilos del encabezado */
+        header {
+            background-color: #6D4C41;
+            color: white;
+            padding: 20px 0;
+            border-bottom: 4px solid #3E2723;
+        }
+
+        header h1 {
+            margin: 0;
+            font-family: 'Merriweather', serif;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        /* Estilos de las secciones */
         section {
-            padding: 40px 0;
+            padding: 60px 0;
+            background-color: #FAFAFA;
+            text-align: center;
         }
 
-        /* Estilos específicos para el video */
+        section h2 {
+            font-size: 30px;
+            margin-bottom: 40px;
+        }
+
+        /* Estilos de los productos */
+        .producto {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .producto img {
+            width: 80%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .producto p {
+            font-size: 16px;
+            color: #616161;
+            margin-top: 10px;
+        }
+
+        /* Estilos de la galería */
+        .galeria-item {
+            margin-bottom: 30px;
+        }
+
+        .galeria-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .descripcion {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .descripcion h4 {
+            font-size: 20px;
+            color: #B71C1C;
+        }
+
+        .descripcion p {
+            font-size: 16px;
+            color: #424242;
+        }
+
+        /* Estilos del video */
         .video {
             text-align: center;
         }
+
         .video iframe {
-            width: 100%;
+            width: 80%;
             max-width: 800px;
+            height: 450px;
+            border: none;
+            border-radius: 10px;
+        }
+
+        .video p {
+            font-size: 16px;
+            color: #616161;
+            margin-top: 10px;
+        }
+
+        /* Estilos de Nosotros */
+        .nosotros p {
+            font-size: 16px;
+            text-align: center;
+            color: #424242;
+        }
+
+        /* Estilos del formulario de contacto */
+        .contacto {
+            background-color: #FAFAFA;
+            padding: 60px 0;
+        }
+
+        .contacto h2 {
+            text-align: center;
+            font-size: 30px;
+            margin-bottom: 40px;
+        }
+
+        .contacto ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .contacto ul li {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .contacto ul li strong {
+            color: #B71C1C;
+        }
+
+        /* Estilos del footer */
+        footer {
+            background-color: #6D4C41;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            border-top: 4px solid #3E2723;
+        }
+
+        footer p {
+            margin: 0;
         }
     </style>
 </head>
 <body>
     <header>
         <div class="container">
-            <h1 style="font-size: 1.5rem;">SAEZ</h1>
+            <h1>SAEZ</h1>
             <nav>
                 <ul>
                     <li><a href="#home">Inicio</a></li>
@@ -148,12 +262,13 @@
 
     <section id="contacto" class="contacto">
         <div class="container">
-            <h2>Contacto - EMPRESA SAEZ</h2>
-            <p>Para más información, contáctenos:</p>
+            <h2>Contacto</h2>
+            <p>¡Contáctanos para más información!</p>
             <ul>
-                <li>Teléfono: 934498803</li>
-                <li>Preguntar por Alex Sáez</li>
-                <li>Dirección: Huachipa - Paradero huaicos</li>
+                <li><strong>Número:</strong> 934498803</li>
+                <li><strong>Correo:</strong> Cesar10_52@hotmail.com</li>
+                <li><strong>Ubicación:</strong> Huachipa - Paradero Huaicos</li>
+                <li><strong>Atención:</strong> 24 horas</li>
             </ul>
         </div>
     </section>
@@ -163,25 +278,5 @@
             <p>&copy; 2024 SAEZ. Todos los derechos reservados.</p>
         </div>
     </footer>
-
-    <script>
-        // Función para controlar el desplazamiento del encabezado
-        let lastScrollTop = 0;
-        const header = document.querySelector('header');
-
-        window.addEventListener('scroll', () => {
-            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-            if (scrollTop > lastScrollTop) {
-                // Desplazamiento hacia abajo
-                header.classList.add('hidden');
-            } else {
-                // Desplazamiento hacia arriba
-                header.classList.remove('hidden');
-            }
-
-            lastScrollTop = scrollTop;
-        });
-    </script>
 </body>
 </html>
